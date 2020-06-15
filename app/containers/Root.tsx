@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { hot } from 'react-hot-loader/root';
 import { History } from 'history';
+import { Text } from '@chakra-ui/core';
 import { Store } from '../reducers/types';
 import Routes from '../Routes';
 
@@ -14,6 +15,7 @@ type Props = {
 const Root = ({ store, history }: Props) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
+      <Text>Hello world</Text>
       <Routes />
     </ConnectedRouter>
   </Provider>
